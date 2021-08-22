@@ -63,15 +63,15 @@
                <div class="col bg-light pt-3 pb-3 border border-2">
                    <form>
                        <div>
-                           <lablel for="loanAmount" class="form-lablel">Loan Amount</lablel>
+                           <lablel for="loanAmount" class="form-label">Loan Amount</lablel>
                            <input type="number" class="form-control" id="loanAmount">
                        </div>
                        <div>
-                           <lablel for="termMonths" class="form-lablel">Term (Months)</lablel>
+                           <lablel for="termMonths" class="form-label">Term (Months)</lablel>
                            <input type="number" class="form-control" id="termMonths">
                        </div>
                        <div>
-                           <lablel for="interestRate" class="form-lablel">Interest Rate (%)</lablel>
+                           <lablel for="interestRate" class="form-label">Interest Rate (%)</lablel>
                            <input type="number" class="form-control" id="interestRate">
                        </div>
                        <div class="d-flex mt-3 justify-content-end">
@@ -84,19 +84,19 @@
                        <h3>Your Monthly Payments</h3>
                    </div>
                    <div class="text-center mb-5">
-                       <h2 id="monthlyPayment">$471.48</h2>
+                       <h2 id="monthlyPayment"></h2>
                    </div>
                    <div class="d-flex justify-content-between">
                        <p>Total Principal</p>
-                       <p id="totalPrincipal">$25,000.00</p>
+                       <p id="totalPrincipal"></p>
                    </div>
                    <div class="d-flex justify-content-between">
                        <p>Total Interest</p>
-                       <p id="totalInterest">$3,3306.85</p>
+                       <p id="totalInterest"></p>
                    </div>
                    <div class="d-flex justify-content-between">
                        <p>Total Cost</p>
-                       <p id="totalCost">$28,306.85</p>
+                       <p id="totalCost"></p>
                    </div>
                </div>
            </div>
@@ -112,7 +112,7 @@
                            <th>Balance</th>
                        </tr>
                    </thead>
-                   <tbody></tbody>
+                   <tbody id="results"></tbody>
                </table>
            </div>
        </div>
@@ -150,6 +150,9 @@
 
     <!-- External JS -->
     <script src="/js/site.js"></script>
+    <script>
+        document.getElementById("btnSubmit").addEventListener("click",getValues);
+    </script>
 
 </body>
 
