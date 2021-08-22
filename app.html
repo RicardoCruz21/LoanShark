@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>App Name: A Coding Project By Ricardo Cruz</title>
+    <title>LOAN SHARK: A Javascript Project By Ricardo Cruz</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -19,7 +19,7 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/css/site.css">
 
-    <link rel="icon" type="image/png" href="/img/favicon.ico">
+    <link rel="icon" type="image/png" href="/img/favicon-16x16.png">
    
 </head>
 
@@ -28,7 +28,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="/img/RicardoCruz_MarkTB.svg" class="d-inline-block align-top" height="32">&nbsp;APP NAME</a>
+            <a class="navbar-brand" href="#"><img src="/img/RicardoCruz_MarkTB.svg" class="d-inline-block align-top" height="32">&nbsp;LOAN SHARK</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -58,7 +58,63 @@
     <!-- Main -->
     <main class="flex-shrink-0">
        <div class="container">
-           
+           <h1>Loan Calculator</h1>
+           <div class="row">
+               <div class="col bg-light pt-3 pb-3 border border-2">
+                   <form>
+                       <div>
+                           <lablel for="loanAmount" class="form-lablel">Loan Amount</lablel>
+                           <input type="number" class="form-control" id="loanAmount">
+                       </div>
+                       <div>
+                           <lablel for="termMonths" class="form-lablel">Term (Months)</lablel>
+                           <input type="number" class="form-control" id="termMonths">
+                       </div>
+                       <div>
+                           <lablel for="interestRate" class="form-lablel">Interest Rate (%)</lablel>
+                           <input type="number" class="form-control" id="interestRate">
+                       </div>
+                       <div class="d-flex mt-3 justify-content-end">
+                           <button type="button" class="btn btn-outline-info" id="btnSubmit">Calculate</button>
+                       </div>
+                   </form>
+               </div>
+               <div class="col border border-2">
+                   <div class="text-center mb-5">
+                       <h3>Your Monthly Payments</h3>
+                   </div>
+                   <div class="text-center mb-5">
+                       <h2 id="monthlyPayment">$471.48</h2>
+                   </div>
+                   <div class="d-flex justify-content-between">
+                       <p>Total Principal</p>
+                       <p id="totalPrincipal">$25,000.00</p>
+                   </div>
+                   <div class="d-flex justify-content-between">
+                       <p>Total Interest</p>
+                       <p id="totalInterest">$3,3306.85</p>
+                   </div>
+                   <div class="d-flex justify-content-between">
+                       <p>Total Cost</p>
+                       <p id="totalCost">$28,306.85</p>
+                   </div>
+               </div>
+           </div>
+           <div class="row mt-3">
+               <table class="table table-striped">
+                   <thead>
+                       <tr class="table-primary">
+                           <th>Month</th>
+                           <th>Payment</th>
+                           <th>Principal</th>
+                           <th>Interest</th>
+                           <th>Total Interest</th>
+                           <th>Balance</th>
+                       </tr>
+                   </thead>
+                   <tbody></tbody>
+               </table>
+           </div>
        </div>
     </main>
 
