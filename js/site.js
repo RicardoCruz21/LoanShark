@@ -37,16 +37,21 @@ function displayNumbers(loanObj){
         loanObj.totalInterest += loanObj.interestPayment;
         loanObj.remainingBalance -= loanObj.principalPayment;
 
-        templateRows += `<tr><td>${month}</td><td>${loanObj.monthlyPayment}</td><td>${loanObj.principalPayment}</td><td>${loanObj.interestPayment}</td><td>${loanObj.totalInterest}</td><td>${loanObj.remainingBalance}</td></tr>`
+        templateRows += `<tr><td>${month}</td>
+                            <td>${loanObj.monthlyPayment.toLocaleString('en-US',{ style: 'currency', currency: 'USD' })}</td>
+                            <td>${loanObj.principalPayment.toLocaleString('en-US',{ style: 'currency', currency: 'USD' })}</td>
+                            <td>${loanObj.interestPayment.toLocaleString('en-US',{ style: 'currency', currency: 'USD' })}</td>
+                            <td>${loanObj.totalInterest.toLocaleString('en-US',{ style: 'currency', currency: 'USD' })}</td>
+                            <td>${loanObj.remainingBalance.toLocaleString('en-US',{ style: 'currency', currency: 'USD' })}</td></tr>`
         
     }
 
     loanObj.totalCost = loanObj.loanAmount + loanObj.totalInterest;
 
-    document.getElementById("monthlyPayment").innerHTML = loanObj.monthlyPayment;
-    document.getElementById("totalPrincipal").innerHTML = loanObj.loanAmount;
-    document.getElementById("totalInterest").innerHTML = loanObj.totalInterest;
-    document.getElementById("totalCost").innerHTML = loanObj.totalCost;
+    document.getElementById("monthlyPayment").innerHTML = loanObj.monthlyPayment.toLocaleString('en-US',{ style: 'currency', currency: 'USD' });
+    document.getElementById("totalPrincipal").innerHTML = loanObj.loanAmount.toLocaleString('en-US',{ style: 'currency', currency: 'USD' });
+    document.getElementById("totalInterest").innerHTML = loanObj.totalInterest.toLocaleString('en-US',{ style: 'currency', currency: 'USD' });
+    document.getElementById("totalCost").innerHTML = loanObj.totalCost.toLocaleString('en-US',{ style: 'currency', currency: 'USD' });
 
     document.getElementById("results").innerHTML = templateRows;
 }
